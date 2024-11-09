@@ -6,20 +6,20 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:04:49 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/09 19:04:58 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:54:03 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_check(char n, va_list ptr)
-{
-	if (n == '%')
-		return (ft_putchar('%'));
-	else if (n == 'c')
-		return (ft_putchar(va_arg(ptr, int)));
-	else if (n == 's')
-		return (ft_putstr(va_arg(ptr, char *)));
+// static int	ft_check(char n, va_list ptr)
+// {
+	// if (n == '%')
+	// 	return (ft_putchar('%'));
+	// else if (n == 'c')
+	// 	return (ft_putchar(va_arg(ptr, int)));
+	// else if (n == 's')
+	// 	return (ft_putstr(va_arg(ptr, char *)));
 	// else if (n == 'd' || n == 'i' || n == 'u')
 	// 	return(ft_putnbr(n,ptr))
 	// else if (n == 'p')
@@ -35,8 +35,8 @@ static int	ft_check(char n, va_list ptr)
 	// 	ft_putchar(n);
 	// }
 	
-	return (2);
-}
+// 	return (2);
+// }
 
 int	ft_printf(const char *t, ...)
 {

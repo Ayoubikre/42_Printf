@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:35:24 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/09 19:04:34 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:51:11 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(void)
 {
 	// ft_printf("int : %z \n", 5);
-	ft_printf("int : %d \n");
+	// ft_printf("int : %d \n");
 	// ft_printf("int : %d \n", -5);
 	// ft_printf("int : %d \n", -2147483648);
 	// ft_printf("int : %d \n", 2147483647);
@@ -26,7 +26,7 @@ int	main(void)
 	// ft_printf("char : %% \n");
 	// ft_printf("str : %s \n", "hello world");
 	// printf("count1 : %d \n",printf("\001\002\007\v\010\f\r\n"));
-	// printf("\n");
+	ft_putstr(NULL);
 	// ft_printf("count2 : %d \n",ft_printf("\001\002\007\v\010\f\r\n"));
 	// 	printf("char1: %c\n", '0');
 	// 	printf("char2: %c\n", '0');
