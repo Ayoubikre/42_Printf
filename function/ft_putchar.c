@@ -6,13 +6,14 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 19:45:01 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/08 21:31:39 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/09 13:27:11 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "../ft_printf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }

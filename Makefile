@@ -2,13 +2,13 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS1 = $(shell find . -name "*.c" -type f)
+SRCS1 = ft_printf.c  $(shell find ./function ./helpers -name "*.c" -type f) 
 
 OBJS = $(SRCS1:.c=.o)
 
 NAME = libftprintf.a
 
-all: $(NAME)
+all: $(NAME) clean
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -16,11 +16,12 @@ $(NAME): $(OBJS)
 %.o: %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
+
 clean:
-	rm -rf $(OBJS)
+	@rm -rf $(OBJS)
 
 fclean:
-	rm -rf $(OBJS) $(NAME)
+	@rm -rf $(OBJS) $(NAME)
 
 re: fclean all
 

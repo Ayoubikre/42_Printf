@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 15:56:14 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/08 21:31:09 by aakritah         ###   ########.fr       */
+/*   Created: 2024/11/09 14:32:50 by aakritah          #+#    #+#             */
+/*   Updated: 2024/11/09 14:32:51 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+
+#include "../ft_printf.h"
+
 
 static int	ft_count(int n)
 {

@@ -6,11 +6,11 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:52:05 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/08 21:31:06 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/09 12:26:42 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "../ft_printf.h"
 
 char	*ft_strdup(const char *s1)
 {
