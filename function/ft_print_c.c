@@ -6,8 +6,19 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 21:52:44 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/09 21:53:15 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:43:26 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+
+int	ft_print_c(char c, va_list ptr)
+{
+	if (c == '%')
+	{
+		ft_putchar('%');
+		return (1);
+	}
+	ft_putchar(va_arg(ptr, int));
+	return (1);
+}

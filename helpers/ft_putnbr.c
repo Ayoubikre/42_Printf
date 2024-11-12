@@ -1,59 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 14:32:50 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/09 14:32:51 by aakritah         ###   ########.fr       */
+/*   Created: 2024/11/12 15:05:27 by aakritah          #+#    #+#             */
+/*   Updated: 2024/11/12 15:15:14 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../ft_printf.h"
 
-
-static int	ft_count(int n)
+void	ft_putnbr(int n)
 {
-	int	i;
-
-	i = 0;
-	if (n <= 0)
-		i++;
-	while (n != 0)
-	{
-		i++;
-		n = n / 10;
-	}
-	return (i);
-}
-
-char	*ft_itoa(int n)
-{
-	char	*t;
-	int		s1;
-	int		f;
-
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	f = 0;
-	s1 = ft_count(n);
-	if (n < 0)
 	{
-		f = 1;
+		ft_putstr("-2147483648");
+		return ;
+	}
+	else if (n < 0)
+	{
+		ft_putchar('-');
 		n *= -1;
 	}
-	t = malloc(s1 + 1);
-	if (!t)
-		return (NULL);
-	t[s1--] = '\0';
-	while (s1 >= 0)
-	{
-		t[s1--] = n % 10 + '0';
-		n = n / 10;
-	}
-	if (f == 1)
-		t[0] = '-';
-	return (t);
+	if (n > 9)
+		ft_putnbr(n / 10);
+	ft_putchar(n % 10 + '0');
 }

@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 19:46:49 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/09 21:47:24 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:32:37 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	ft_putstr(const char *s)
 {
 	if (!s)
-        return; 
+		return ;
 	write(1, s, ft_strlen(s));
 }
