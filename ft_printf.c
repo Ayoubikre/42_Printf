@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:04:49 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/13 12:39:01 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:40:06 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 static int	ft_check(char n, va_list ptr)
 {
-	if (n == '\0')
-		return (0);
-	else if (n == '%')
+	if (n == '%')
 		return (ft_print_c(n, ptr));
 	else if (n == 'c')
 		return (ft_print_c(n, ptr));
@@ -47,9 +45,9 @@ int	ft_printf(const char *t, ...)
 		return (-1);
 	while (t[i])
 	{
-		if (t[i] == '%' && i < (int)ft_strlen(t))
+		if (t[i] == '%' && t[i + 1] != '\0')
 			count1 += ft_check(t[++i], ptr);
-		else
+		else if (t[i] != '%')
 		{
 			write(1, t + i, 1);
 			count2++;
