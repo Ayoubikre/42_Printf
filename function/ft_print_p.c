@@ -6,13 +6,13 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 21:53:00 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/12 21:36:49 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:30:05 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-static int	ft_putnbrx(uintptr_t i)
+static int	ft_putnbrx(unsigned long i)
 {
 	int	count;
 
@@ -34,9 +34,9 @@ static int	ft_putnbrx(uintptr_t i)
 
 int	ft_print_p(va_list ptr)
 {
-	uintptr_t	i;
+	unsigned long	i;
 
-	i = (uintptr_t)va_arg(ptr, void *);
+	i = (unsigned long)va_arg(ptr, void *);
 	ft_putstr("0x");
 	return (ft_putnbrx(i) + 2);
 }

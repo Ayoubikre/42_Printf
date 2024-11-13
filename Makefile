@@ -1,7 +1,5 @@
 CC = cc
-
 CFLAGS = -Wall -Wextra -Werror
-
 SRCS1 = ft_printf.c \
 			helpers/ft_putchar.c \
 			helpers/ft_putnbr.c \
@@ -26,12 +24,11 @@ $(NAME): $(OBJS)
 %.o: %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-
 clean:
-	@rm -rf $(OBJS)
+	rm -rf $(OBJS)
 
-fclean:
-	@rm -rf $(OBJS) $(NAME)
+fclean: clean
+	rm -rf $(NAME)
 
 re: fclean all
 

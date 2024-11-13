@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:05:03 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/12 21:46:02 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:33:22 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
