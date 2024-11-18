@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 21:53:09 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/13 12:30:16 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:55:43 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_putnbrx(unsigned int i, int f)
 			ft_putchar((i % 16) - 10 + 'a');
 		count++;
 	}
-	else if (0 <= i % 16 && i % 16 <= 9)
+	else if (i % 16 <= 9)
 	{
 		ft_putchar((i % 16) + '0');
 		count++;
@@ -37,12 +37,10 @@ static int	ft_putnbrx(unsigned int i, int f)
 
 int	ft_print_x(char n, va_list ptr)
 {
-	int				f;
-	unsigned int	i;
+	int	f;
 
 	f = 0;
 	if (n == 'X')
 		f = 1;
-	i = va_arg(ptr, unsigned int);
-	return (ft_putnbrx(i, f));
+	return (ft_putnbrx(va_arg(ptr, unsigned int), f));
 }

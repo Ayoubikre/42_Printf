@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:16:49 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/13 12:30:01 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:03:20 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,38 +27,24 @@ static int	ft_count1(int n)
 	return (i);
 }
 
-static int	ft_count2(unsigned int n)
+static int	ft_putnbr2(unsigned int n)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	if (n == 0)
-		i++;
-	while (n != 0)
-	{
-		i++;
-		n = n / 10;
-	}
-	return (i);
-}
-
-static void	ft_putnbr2(unsigned int n)
-{
+	count = 0;
 	if (n > 9)
-		ft_putnbr2(n / 10);
-	ft_putchar(n % 10 + '0');
+		count += ft_putnbr2(n / 10);
+	ft_putchar((n % 10) + '0');
+	count++;
+	return (count);
 }
 
 int	ft_print_d(char n, va_list ptr)
 {
-	unsigned long	i;
+	int	i;
 
 	if (n == 'u')
-	{
-		i = va_arg(ptr, unsigned int);
-		ft_putnbr2(i);
-		return (ft_count2(i));
-	}
+		return (ft_putnbr2(va_arg(ptr, unsigned int)));
 	i = va_arg(ptr, int);
 	ft_putnbr(i);
 	return (ft_count1(i));

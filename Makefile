@@ -4,7 +4,6 @@ SRCS1 = ft_printf.c \
 			helpers/ft_putchar.c \
 			helpers/ft_putnbr.c \
 			helpers/ft_putstr.c \
-			helpers/ft_strdup.c \
 			helpers/ft_strlen.c \
 			function/ft_print_c.c \
 			function/ft_print_d.c \

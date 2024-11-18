@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:04:49 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/13 13:40:06 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:07:07 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,10 @@ static int	ft_check(char n, va_list ptr)
 int	ft_printf(const char *t, ...)
 {
 	int		i;
-	int		count1;
-	int		count2;
+	int		count;
 	va_list	ptr;
 
-	count1 = 0;
-	count2 = 0;
+	count = 0;
 	i = 0;
 	va_start(ptr, t);
 	if (!t || write(1, NULL, 0) == -1)
@@ -46,14 +44,14 @@ int	ft_printf(const char *t, ...)
 	while (t[i])
 	{
 		if (t[i] == '%' && t[i + 1] != '\0')
-			count1 += ft_check(t[++i], ptr);
+			count += ft_check(t[++i], ptr);
 		else if (t[i] != '%')
 		{
 			write(1, t + i, 1);
-			count2++;
+			count++;
 		}
 		i++;
 	}
 	va_end(ptr);
-	return (count1 + count2);
+	return (count);
 }
